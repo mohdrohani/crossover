@@ -1,0 +1,233 @@
+From 4caf34a57502fb5e5457be427524b053c759f4d9 Mon Sep 17 00:00:00 2001
+From: mohammed alrawhani <mohdalrawhani@gmail.com>
+Date: Sun, 1 Jul 2018 10:34:26 +0300
+Subject: [PATCH] My submission
+XOV: XO_0_0_1
+
+---
+ ...olar-java-d41d8cd98f00b204e9800998ecf8427e | Bin 0 -> 8437 bytes
+ cross-solar-java/build.gradle                 |  29 ++++++++++++++++++
+ cross-solar-java/settings.gradle              |   1 +
+ gradlew                                       |   0
+ local.properties                              |   8 +++++
+ .../exceptions/GlobalExceptionHandler.java    |   0
+ .../techtrial/model/HourlyElectricity.java    |   9 ++----
+ .../com/crossover/techtrial/model/Panel.java  |   9 ++----
+ src/main/resources/application.properties     |   2 +-
+ .../db/changelog/db.changelog-1.0.xml         |   0
+ .../db/changelog/db.changelog-master.xml      |   0
+ .../controller/PanelControllerTest.java       |   4 +--
+ 12 files changed, 45 insertions(+), 17 deletions(-)
+ create mode 100644 cross-solar-java/.nb-gradle/private/cache/cross-solar-java-d41d8cd98f00b204e9800998ecf8427e
+ create mode 100644 cross-solar-java/build.gradle
+ create mode 100644 cross-solar-java/settings.gradle
+ mode change 100755 => 100644 gradlew
+ create mode 100644 local.properties
+ mode change 100755 => 100644 src/main/java/com/crossover/techtrial/exceptions/GlobalExceptionHandler.java
+ mode change 100755 => 100644 src/main/resources/db/changelog/db.changelog-1.0.xml
+ mode change 100755 => 100644 src/main/resources/db/changelog/db.changelog-master.xml
+
+diff --git a/cross-solar-java/.nb-gradle/private/cache/cross-solar-java-d41d8cd98f00b204e9800998ecf8427e b/cross-solar-java/.nb-gradle/private/cache/cross-solar-java-d41d8cd98f00b204e9800998ecf8427e
+new file mode 100644
+index 0000000000000000000000000000000000000000..bfabfd20decd8f760edf0a8f6badd3b91dbcd67e
+GIT binary patch
+literal 8437
+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
+
+literal 0
+HcmV?d00001
+
+diff --git a/cross-solar-java/build.gradle b/cross-solar-java/build.gradle
+new file mode 100644
+index 0000000..7aa7170
+--- /dev/null
++++ b/cross-solar-java/build.gradle
+@@ -0,0 +1,29 @@
++apply plugin: 'java'
++
++sourceCompatibility = '1.8'
++[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
++
++// NetBeans will automatically add "run" and "debug" tasks relying on the
++// "mainClass" property. You may however define the property prior executing
++// tasks by passing a "-PmainClass=<QUALIFIED_CLASS_NAME>" argument.
++//
++// Note however, that you may define your own "run" and "debug" task if you
++// prefer. In this case NetBeans will not add these tasks but you may rely on
++// your own implementation.
++if (!hasProperty('mainClass')) {
++    ext.mainClass = ''
++}
++
++repositories {
++    mavenCentral()
++    // You may define additional repositories, or even remove "mavenCentral()".
++    // Read more about repositories here:
++    //   http://www.gradle.org/docs/current/userguide/dependency_management.html#sec:repositories
++}
++
++dependencies {
++    // TODO: Add dependencies here ...
++    // You can read more about how to add dependency here:
++    //   http://www.gradle.org/docs/current/userguide/dependency_management.html#sec:how_to_declare_your_dependencies
++    testCompile group: 'junit', name: 'junit', version: '4.10'
++}
+diff --git a/cross-solar-java/settings.gradle b/cross-solar-java/settings.gradle
+new file mode 100644
+index 0000000..9c6924b
+--- /dev/null
++++ b/cross-solar-java/settings.gradle
+@@ -0,0 +1 @@
++rootProject.name = 'cross-solar-java'
+diff --git a/gradlew b/gradlew
+old mode 100755
+new mode 100644
+diff --git a/local.properties b/local.properties
+new file mode 100644
+index 0000000..a267110
+--- /dev/null
++++ b/local.properties
+@@ -0,0 +1,8 @@
++## This file must *NOT* be checked into Version Control Systems,
++# as it contains information specific to your local configuration.
++#
++# Location of the SDK. This is only used by Gradle.
++# For customization when using a Version Control System, please read the
++# header note.
++#Sat Jun 30 23:27:06 AST 2018
++sdk.dir=C\:\\Users\\mohammed\\AppData\\Local\\Android\\Sdk
+diff --git a/src/main/java/com/crossover/techtrial/exceptions/GlobalExceptionHandler.java b/src/main/java/com/crossover/techtrial/exceptions/GlobalExceptionHandler.java
+old mode 100755
+new mode 100644
+diff --git a/src/main/java/com/crossover/techtrial/model/HourlyElectricity.java b/src/main/java/com/crossover/techtrial/model/HourlyElectricity.java
+index 275f765..c97bd11 100644
+--- a/src/main/java/com/crossover/techtrial/model/HourlyElectricity.java
++++ b/src/main/java/com/crossover/techtrial/model/HourlyElectricity.java
+@@ -108,13 +108,8 @@ public class HourlyElectricity implements Serializable {
+       return false;
+     }
+     if (readingAt == null) {
+-      if (other.readingAt != null) {
+-        return false;
+-      }
+-    } else if (!readingAt.equals(other.readingAt)) {
+-      return false;
+-    }
+-    return true;
++        return other.readingAt == null;
++    } else return readingAt.equals(other.readingAt);
+   }
+ 
+   /* (non-Javadoc)
+diff --git a/src/main/java/com/crossover/techtrial/model/Panel.java b/src/main/java/com/crossover/techtrial/model/Panel.java
+index 34fb762..0ddb2c9 100644
+--- a/src/main/java/com/crossover/techtrial/model/Panel.java
++++ b/src/main/java/com/crossover/techtrial/model/Panel.java
+@@ -127,13 +127,8 @@ public class Panel implements Serializable {
+       return false;
+     }
+     if (serial == null) {
+-      if (other.serial != null) {
+-        return false;
+-      }
+-    } else if (!serial.equals(other.serial)) {
+-      return false;
+-    }
+-    return true;
++      return other.serial == null;
++    } else return serial.equals(other.serial);
+   }
+ 
+   /* (non-Javadoc)
+diff --git a/src/main/resources/application.properties b/src/main/resources/application.properties
+index c7cc890..2ddd48a 100644
+--- a/src/main/resources/application.properties
++++ b/src/main/resources/application.properties
+@@ -1,6 +1,6 @@
+ #PLEASE TRY NOT TO CHANGE SETTINGS AND USE APPROPRIATE ENV VARIABLES and DATABASE NAME AS CONFIGURED BELOW
+ #Database connection Parameters
+-spring.datasource.url: jdbc:mysql://localhost:3306/crosssolar?createDatabaseIfNotExist=true&useSSL=false
++spring.datasource.url= jdbc:mysql://localhost:3306/crosssolar?createDatabaseIfNotExist=true&useSSL=false
+ spring.datasource.username=root
+ spring.datasource.password=
+ spring.datasource.driver-class-name=com.mysql.jdbc.Driver
+diff --git a/src/main/resources/db/changelog/db.changelog-1.0.xml b/src/main/resources/db/changelog/db.changelog-1.0.xml
+old mode 100755
+new mode 100644
+diff --git a/src/main/resources/db/changelog/db.changelog-master.xml b/src/main/resources/db/changelog/db.changelog-master.xml
+old mode 100755
+new mode 100644
+diff --git a/src/test/java/com/crossover/techtrial/controller/PanelControllerTest.java b/src/test/java/com/crossover/techtrial/controller/PanelControllerTest.java
+index a1deacf..4224403 100644
+--- a/src/test/java/com/crossover/techtrial/controller/PanelControllerTest.java
++++ b/src/test/java/com/crossover/techtrial/controller/PanelControllerTest.java
+@@ -39,12 +39,12 @@ public class PanelControllerTest {
+   private TestRestTemplate template;
+ 
+   @Before
+-  public void setup() throws Exception {
++  public void setup() {
+     mockMvc = MockMvcBuilders.standaloneSetup(panelController).build();
+   }
+ 
+   @Test
+-  public void testPanelShouldBeRegistered() throws Exception {
++  public void testPanelShouldBeRegistered() {
+     HttpEntity<Object> panel = getHttpEntity(
+         "{\"serial\": \"232323\", \"longitude\": \"54.123232\"," 
+             + " \"latitude\": \"54.123232\",\"brand\":\"tesla\" }");
+-- 
+2.17.0.windows.1
+
