@@ -127,13 +127,8 @@ public class Panel implements Serializable {
       return false;
     }
     if (serial == null) {
-      if (other.serial != null) {
-        return false;
-      }
-    } else if (!serial.equals(other.serial)) {
-      return false;
-    }
-    return true;
+      return other.serial == null;
+    } else return serial.equals(other.serial);
   }
 
   /* (non-Javadoc)

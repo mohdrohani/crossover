@@ -108,13 +108,8 @@ public class HourlyElectricity implements Serializable {
       return false;
     }
     if (readingAt == null) {
-      if (other.readingAt != null) {
-        return false;
-      }
-    } else if (!readingAt.equals(other.readingAt)) {
-      return false;
-    }
-    return true;
+        return other.readingAt == null;
+    } else return readingAt.equals(other.readingAt);
   }
 
   /* (non-Javadoc)

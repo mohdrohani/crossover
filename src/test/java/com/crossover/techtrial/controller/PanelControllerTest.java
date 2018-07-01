@@ -39,12 +39,12 @@ public class PanelControllerTest {
   private TestRestTemplate template;
 
   @Before
-  public void setup() throws Exception {
+  public void setup() {
     mockMvc = MockMvcBuilders.standaloneSetup(panelController).build();
   }
 
   @Test
-  public void testPanelShouldBeRegistered() throws Exception {
+  public void testPanelShouldBeRegistered() {
     HttpEntity<Object> panel = getHttpEntity(
         "{\"serial\": \"232323\", \"longitude\": \"54.123232\"," 
             + " \"latitude\": \"54.123232\",\"brand\":\"tesla\" }");
